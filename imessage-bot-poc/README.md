@@ -23,7 +23,9 @@ Proof of concept для отправки iMessage через BlueBubbles API.
 
 ### 1. Install BlueBubbles Server
 
-**Скачай:**
+**⚠️ IMPORTANT:** BlueBubbles is an external dependency that must be installed separately.
+
+**Option A: Download Pre-built App (Recommended for quick start)**
 ```bash
 # Открой в браузере:
 https://github.com/BlueBubblesApp/bluebubbles-server/releases
@@ -31,6 +33,25 @@ https://github.com/BlueBubblesApp/bluebubbles-server/releases
 # Скачай latest .dmg (например BlueBubbles-1.9.x.dmg)
 # Установи как обычное приложение
 ```
+
+**Option B: Clone from Source**
+```bash
+cd /Users/leo/Desktop/test-task/imessage-bot-poc/
+
+# Remove placeholder directory
+rm -rf bluebubbles-server
+
+# Clone BlueBubbles
+git clone https://github.com/BlueBubblesApp/bluebubbles-server.git
+cd bluebubbles-server
+npm install
+
+# Run server
+cd packages/server
+npm run start
+```
+
+📝 See `bluebubbles-server/README.md` for detailed installation instructions.
 
 **Настрой:**
 1. Запусти BlueBubbles app
